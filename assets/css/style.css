@@ -107,19 +107,91 @@ a {
     height: 0.5rem;
     margin-top: 1rem;
     align-self: auto;
-    width: 100%;
+    width: 50%;
     position: relative;
 }
 
+* {
+    outline: 1px dashed red;
+}
+
+        .mobileDropBox {
+            position: relative;            
+            width: 50em;
+        }
+
+        .mobileDrop {
+/*             width: 100%; */
+            position: relative;
+            color: black;
+            display: flex;
+            flex-flow: column wrap;
+            text-shadow: 0 0 4px white;
+            justify-content: center;
+        }
+
+        .mobileDropContent {
+            display: flex;
+            flex-flow: column wrap;
+            text-align: center;
+            position: absolute;
+            /* margin: auto 0; */
+            text-align: center;
+            width: 100%;
+        }
+
+        .mobileDropContent a {
+            padding: 0.1rem;
+        }
+
+        .mobileDropSubItem {
+            display: none;
+            flex-flow: column wrap;
+            position: absolute;
+            text-align: right;
+            width: 100%;
+            /* margin: auto 0; */
+            margin-left: 200%;
+            background: limegreen;
+            text-align: center;
+        }
+
+.mobileDropSubItem a {
+    width: 100%;
+}
+
+        .mobileDropItem {
+            position: relative;
+            display: inline-flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            width: 50%;
+        }
+
+        .mobileDropItem a {
+            position: relative;
+            flex-grow: 2;
+            background: green;          
+        }
+
+        .mobileDropBox:hover>.mobileDropContent {
+        }
+
+        .mobileDropItem:hover>.mobileDropSubItem {
+            display: inline-flex;
+        }
+
 /* ==============================Mobile NAV================================== */
+
+/*
 
 .mobileDropBox {
         position: relative;            
-        width: 100%;
-        display: 0 1 flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        justify-content: center;
+        width: 70em;
+     display: 0 1 flex;
+    flex-flow: column nowrap;
+        align-self: center;
+        justify-content: space-evenly;
     }
 
 .mobileDropBox:hover .menuIconHam {
@@ -127,10 +199,8 @@ a {
 }
 
 .mobileDropBox:hover>.mobileDropContent {
-    display: flex;
-    border: 0.1rem solid black;
-    border-radius: 0.5vw;
-    margin: auto;
+     display: flex;
+     margin: auto; 
 }
 
 .mobileDrop {
@@ -142,44 +212,54 @@ a {
 }
 
 .mobileDropContent {
-    width: inherit;
+    width: 100%;
     display: none;
     flex-flow: column wrap;
     text-align: center;
     position: absolute;
     text-align: center; 
-    justify-content: center;
+    justify-content: space-evenly;
+    position: absolute;
+    display: block;
+    margin: inherit
 }
 
 .mobileDropItem {
-    display: inline-flex;
-    flex-flow: row wrap;
-    background: white;
-    justify-content: space-around;
-    background:  linear-gradient(to bottom right, black, grey);
+    display: block;
+     flex: 0 0 auto; 
+   width: 100%;
+
+    justify-content: space-between;   
 }
 
 .mobileDropItem a {
     word-break: break-all;
     background: limegreen;
-    width: 15vw;
+    display: block;
     padding: 0.1vw;
+    width: 50%;
+  
 }
 
 .mobileDropSubItem {
-    display: none;
-    flex-flow: column wrap;
-    position: absolute;
+    display: block;
+    flex-flow: column;
     margin-top: auto;
-    margin-left: 30.8vw;
     background: limegreen;
     text-align: center;
+    width: 50%;
+    margin-left: 50%;
+    margin-top: 0;
     border: 0.1em solid black;
 }
 
+.mobileDropSubItem a {
+    width: 100%;
+}
+
 .mobileDropItem:hover>.mobileDropSubItem {
-    display: flex;
-    justify-content: center;  
+    display: block;
+    justify-content: center;
 }
 
 .mobileDropItem:hover>.mobileDropSubItem a {
@@ -187,9 +267,9 @@ a {
     margin: 0;
 }
 
-.mobileDropItem a:hover{
+.mobileDropItem:hover>a{
     color: white;
-    background: black;
+    background: red;
 }
 
 .mobileDropSubItem:hover a {
@@ -201,6 +281,8 @@ a {
     color: white;
  
 }
+
+*/
 
 /* DROP NAV*************************************************************************** */
 
@@ -223,7 +305,14 @@ a {
 }
 
 @media screen and (max-width: 450px) and (max-width: 3000px) {
-  .dropDown { display: none; }
+  .dropDown { 
+      display: none;
+   }
+   
+    .title {
+        font-size: 5vw;
+        
+    }
 }
 
 
