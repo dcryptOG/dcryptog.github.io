@@ -315,7 +315,6 @@ a {
 }
 
 picture img {
-          outline: 1px solid red;
     	width: 20vw;
     	min-height: 20vh;
     	margin: 0; padding: 0;
@@ -323,7 +322,8 @@ picture img {
     	overflow: hidden;
     	box-sizing: border-box;
         object-fit: contain;
-        outline: 5px solid red;
+        border: 1em solid limegreen;
+        outline: 1em solid black;
 }
 
 #qualify {
@@ -352,8 +352,8 @@ picture img {
     flex-flow: column wrap;
     align-items: center;
     flex-grow: 1;
-    	box-sizing: border-box;
-        object-fit: contain;
+    box-sizing: border-box;
+    object-fit: contain;
     margin: 1rem;
 }
 
@@ -412,15 +412,29 @@ input[type=submit]:hover {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-
 }
 
 .workBox {
+    width: 25vw;
+    min-height: 25vh;
+    margin: 0; padding: 0;
+    flex-grow: 1;
+    overflow: hidden;
+    box-sizing: border-box;
     border: 1rem solid black;
     outline: .1rem solid limegreen;
     padding: 0.1rem;
     margin: 0.5rem;
+    box-sizing: border-box;
     background: linear-gradient(to bottom right, forestgreen, limegreen);    
+}
+
+.workBox>a>picture>.workImg {
+    margin: 0; padding: 0;
+    flex-grow: 1;
+    overflow: hidden;
+    box-sizing: border-box;
+    object-fit: fill;
 }
 
 .workBox:hover {
