@@ -394,12 +394,12 @@ picture img {
     padding: 0;
     top: 0;
     text-shadow: 0 0 0.5px limegreen;
-    font-size: 3.5rem;
+    font-size: 4rem;
     flex-grow: stretch;
 }
 
 .qualifyBox {
-    background: rgba(245, 245, 245, 0.5);
+    background: rgba(245, 245, 245, 0.3);
     border: 0.1rem solid black;
     border-radius: 0.5rem;
     padding: 0rem 5rem;
@@ -417,9 +417,23 @@ picture img {
     width: 100%;
 }
 
+.qualifyContent p:first-child {
+    text-align: center;
+    color: black;
+    background: limegreen;
+    border: 0.1rem solid limegreen;
+    border-radius: .1rem;
+    font-size: 3rem;
+}
+
 .qualifyItem p:first-child {
     text-align: center;
-    color: red;
+    color: limegreen;
+    text-shadow: -0.1rem 0 black, 0 0.1rem black, 0.1rem 0 black, 0 -0.1rem black;
+    font-size: 2.5rem;
+    border: none;
+    word-spacing: 0.5em;
+    background: rgba(245, 245, 245, 0.5);;
 }
 
 .qualifyItem p {
