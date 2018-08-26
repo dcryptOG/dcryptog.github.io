@@ -349,14 +349,14 @@ a {
 }
 
 picture img {
-    	width: 20vw;
-    	min-height: 20vh;
-    	margin: 0; padding: 0;
-    	flex-grow: 1;
-    	overflow: hidden;
-    	box-sizing: border-box;
-        object-fit: contain;
-        border: 1em solid black;
+    width: 20vw;
+    min-height: 20vh;
+    margin: 0; padding: 0;
+    flex-grow: 1;
+    overflow: hidden;
+    box-sizing: border-box;
+    object-fit: contain;
+    border: 1em solid black;
 }
 
 #qualify {
