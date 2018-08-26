@@ -343,9 +343,24 @@ a {
     margin: 1rem;
 }
 
-#coverLetterContent>article {
+#coverLetterBox {
+    background: rgba(245, 245, 245, 0.8);
+    border: 0.1rem solid black;
+    border-radius: 0.5rem;
+    padding: 0rem 5rem;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    flex-grow: 1;
+    box-sizing: border-box;
+    object-fit: contain;
+    margin: 1rem;
+}
+
+#coverLetterBox>article {
     display: inline-flex;
     font-size: 2rem;
+    text-align: left;
 }
 
 picture img {
