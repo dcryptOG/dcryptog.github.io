@@ -339,12 +339,13 @@ a {
 .aboutTitleBox {
     background: linear-gradient(to bottom right, forestgreen, limegreen);
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 2em;
     margin: 1rem;
 }
 
-#coverLetter {
+#coverLetterContent>article {
     display: inline-flex;
+    font-size: 2rem;
 }
 
 picture img {
@@ -355,8 +356,7 @@ picture img {
     	overflow: hidden;
     	box-sizing: border-box;
         object-fit: contain;
-        border: 1em solid limegreen;
-        outline: 1em solid black;
+        border: 1em solid black;
 }
 
 #qualify {
