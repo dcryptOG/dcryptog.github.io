@@ -4,7 +4,6 @@ html {
     font-size: 0.5em;
 }
 
-
 body {
     width: 100%;
     margin: 0;
@@ -403,6 +402,8 @@ picture>img {
     object-fit: contain;
 }
 
+/* INDEX COVER LETTER STYLES*************** */
+
 #coverLetterBox {
     background: rgba(255, 255, 255, 0.5);
     border: 0.1rem solid black;
@@ -415,10 +416,6 @@ picture>img {
 
 #coverLetter {
     display: inline-flex;
-}
-
-* {
-    outline: 1px dashed red;
 }
 
 #coverLetterBox>article {
@@ -439,6 +436,11 @@ picture>img {
     height: 20vw;
 }
 
+#coverLetter>picture>img {
+}
+
+/* INDEX QUALIFICATIONS STYLES*************** */
+
 .qualifyItem>#mCATScoreBox {
     flex-grow: 2;
 }
@@ -448,9 +450,6 @@ picture>img {
     padding: 1rem;
     border-radius: 0.5rem;
     border: 0.1rem solid limegreen;
-}
-
-#coverLetter>picture>img {
 }
 
 #coverLetterBox>article>p::first-letter {
@@ -495,6 +494,17 @@ picture>img {
     width: 100%;
 }
 
+.qualifyContent>p:first-child {
+    margin-top: 0;
+    color: black;
+    background: linear-gradient(to bottom right, rgba(34, 139, 34, 0.3), rgba(50, 205, 50, 0.3));
+    border: 0.1rem solid black;
+    border-radius: .1rem;
+    font-size: 2.5em;
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: bolder;    
+}
+
 .qualifyItem {
     background-image: linear-gradient(to top, rgba(255, 255, 255, 0.4) 60%, rgba(0, 0, 0, 0.1));
     border: 0.1rem solid rgba(50, 205, 50, 0.5);
@@ -508,17 +518,6 @@ picture>img {
     object-fit: contain;
     margin: 1rem;
     letter-spacing: 0.05vw;
-}
-
-.qualifyContent>p:first-child {
-    margin-top: 0;
-    color: black;
-    background: linear-gradient(to bottom right, rgba(34, 139, 34, 0.3), rgba(50, 205, 50, 0.3));
-    border: 0.1rem solid black;
-    border-radius: .1rem;
-    font-size: 2.5em;
-    font-family: 'IBM Plex Serif', serif;
-    font-weight: bolder;    
 }
 
 .qualifyItem>p:first-child {
@@ -550,6 +549,8 @@ picture>img {
 #skillItem>p:nth-child(2) {
     text-align: left;
 }
+
+/* EXTERNAL RESOURCES STYLES ******************** */
 
 #linkedIn>.qualifyItem {
     align-items: center;
@@ -705,30 +706,31 @@ input[type=submit]:hover {
     text-align: center;
 }
 
-.footLink:nth-child(2){
-    border-radius: 50%;
-    font-size: 2.5rem;
-}
-
 .footLink {
     font-family: inherit;
-    background: rgba(0, 0,0, 0.6);
     color: whitesmoke;
     text-shadow: 0 0 4px limegreen;
-    margin: 0.5rem;  
+    margin: 0.5rem;
     padding: 1rem;
     font-size: 2rem;
-    border: 0.1rem solid black;
-    border-radius: 0.1rem;
     -moz-box-shadow:    inset 0 0 5px limegreen;
     -webkit-box-shadow: inset 0 0 5px limegreen;
     box-shadow: inset 0 0 5px limegreen;
+}
+
+.footLink:nth-child(2){
+    border-radius: 50%;
+    font-size: 2.5rem;
+    border: 0.1rem solid black;
+    background: rgba(0, 0,0, 1);
+}
+
+.footLink:nth-child(1){
+    font-size: 2.5rem;
+    background: rgba(0, 0,0, 0.2);
 }
 
 .footLink:hover {
     background: rgba(255, 255,255 , 0.5);
     color: black;
 }
-
-/* ===============================TOP NAV BAR============================================== */
-
