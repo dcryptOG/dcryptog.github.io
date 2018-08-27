@@ -53,9 +53,9 @@ a {
     width: 100%;
     background: black;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    margin: 3rem;
+    margin: auto;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
     border: 0.1vw solid rgba(0, 0, 0, 0.1);
 }
 
@@ -383,33 +383,6 @@ a {
     margin: 1rem;
 }
 
-#coverLetterBox {
-    background: rgba(255, 255, 255, 0.5);
-    border: 0.1rem solid black;
-    border-radius: 0.5rem;
-    padding: 0rem 5rem;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    flex-grow: 1;
-    box-sizing: border-box;
-    object-fit: contain;
-    margin: 1rem;
-    
-}
-
-#coverLetterBox>article {
-    display: inline-flex;
-    text-align: left;
-}
-
-#coverLetterBox>article>p::first-letter {
-    font-size: 200%;
-    color: limegreen;
-    margin-left: 5rem;
-    text-shadow: -0.1rem 0 black, 0 0.1rem black, 0.1rem 0 black, 0 -0.1rem black;
-}
-
 picture {
     display: flex;
     box-sizing: border-box;
@@ -418,13 +391,56 @@ picture {
 }
 
 picture>img {
-    width: 20vw;
-    min-height: 20vh;
+    display: flex;
+    width: 100%;
+    min-height: 100%;
     margin: 0; padding: 0;
     flex-grow: 1;
     overflow: hidden;
     box-sizing: border-box;
     object-fit: contain;
+}
+
+#coverLetterBox {
+    background: rgba(255, 255, 255, 0.5);
+    border: 0.1rem solid black;
+    border-radius: 0.5rem;
+    padding: 0rem 5rem;
+    display: flex;
+    flex-flow: row wrap;
+    margin: auto;
+}
+
+#coverLetter {
+    display: inline-flex;
+}
+
+* {
+    outline: 1px dashed red;
+}
+
+#coverLetterBox>article {
+    text-align: left;
+}
+
+#coverLetter>picture {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid limegreen;
+    min-width: 30%;
+    width: 20vw;
+    height: 20vw;
+}
+
+#coverLetter>picture>img {
+}
+
+#coverLetterBox>article>p::first-letter {
+    font-size: 200%;
+    color: limegreen;
+    margin-left: 5rem;
+    text-shadow: -0.1rem 0 black, 0 0.1rem black, 0.1rem 0 black, 0 -0.1rem black;
 }
 
 #qualify {
