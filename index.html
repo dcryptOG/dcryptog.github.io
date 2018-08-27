@@ -37,9 +37,9 @@
                         <span class='mobileDropItem'>
                             <a class='mobileDropLink' href="index.html">About &#x21DB;</a>
                             <div class='mobileDropSubItem'>
-                                <a href="#">Intro</a>
-                                <a href="#">Resume</a>
-                                <a href="#">LinkedIn</a>
+                                <a href="#coverLetter">Intro</a>
+                                <a href="#qualifications">Resume</a>
+                                <a href="#extResources">LinkedIn</a>
                             </div>
                         </span>
                         <span class='mobileDropItem'>
@@ -67,9 +67,9 @@
                 <div class="dropDown" role='navigation'>
                     <a href='index.html' class='hoverLink'>About<span class='arrowDown'></a>
                     <span class="dropContent">
-                        <a href="#" class='dropItem'>Intro</a>
-                        <a href="#" class='dropItem'>Resume</a>
-                        <a href="#" class='dropItem'>LinkedIn</a>
+                        <a href="#coverLetter" class='dropItem'>Intro</a>
+                        <a href="#qualifications" class='dropItem'>Resume</a>
+                        <a href="#extResources" class='dropItem'>LinkedIn</a>
                     </span>
                 </div>
 
@@ -93,7 +93,7 @@
         </header>
     </section>
 
-    <span class='contentPad'></span>
+    <span class='contentPad'><a href="" id='topScroll'></a></span>
 
     <section class='content'>
         <div class='flex-container' id='contentPad'></div>
@@ -247,7 +247,7 @@
                 </div>
 
                 <nav class='aboutTitleBox'>
-                    <a href='#' class='aboutTitle'>
+                    <a href='#' class='aboutTitle' id='extResources'>
                         External Resources
                     </a>
                 </nav>
@@ -277,48 +277,12 @@
         </div>
         <footer class="footer">
             <nav class='footNav'>
-                <a href='https://dcryptog.github.io/#top' class='footLink'>Back to Top</a>
+                <a href='#topScroll' class='footLink'>Back to Top</a>
                 <a href='#' class='footLink'>&copy;</a>
             </nav>
         </footer>
     </section>
 </body>
-
-<script>
-    function filterPath(string) {
-  return string
-    .replace(/^\//, '')
-    .replace(/(index|default).[a-zA-Z]{3,4}$/, '')
-    .replace(/\/$/, '');
-}
-
-var locationPath = filterPath(location.pathname);
-$('a[href*="#"]').each(function () {
-  var thisPath = filterPath(this.pathname) || locationPath;
-  var hash = this.hash;
-  if ($("#" + hash.replace(/#/, '')).length) {
-    if (locationPath == thisPath && (location.hostname == this.hostname || !this.hostname) && this.hash.replace(/#/, '')) {
-      var $target = $(hash), target = this.hash;
-      if (target) {
-        $(this).click(function (event) {
-          event.preventDefault();
-          $('html, body').animate({scrollTop: $target.offset().top}, 1000, function () {
-            location.hash = target; 
-            $target.focus();
-            if ($target.is(":focus")){ //checking if the target was focused
-              return false;
-            }else{
-              $target.attr('tabindex','-1'); //Adding tabindex for elements not focusable
-              $target.focus(); //Setting focus
-            };
-          });       
-        });
-      }
-    }
-  }
-});
-</script>
-
 </html>
 
 <!-- 

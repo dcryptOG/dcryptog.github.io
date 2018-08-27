@@ -711,23 +711,30 @@ input[type=submit]:hover {
     color: whitesmoke;
     text-shadow: 0 0 4px limegreen;
     margin: 0.5rem;
-    padding: 1rem;
     font-size: 2rem;
-    -moz-box-shadow:    inset 0 0 5px limegreen;
-    -webkit-box-shadow: inset 0 0 5px limegreen;
-    box-shadow: inset 0 0 5px limegreen;
 }
 
 .footLink:nth-child(2){
     border-radius: 50%;
     font-size: 2.5rem;
+    height: 3rem;
+    width: 3rem;
+    padding: 1rem;
     border: 0.1rem solid black;
     background: rgba(0, 0,0, 1);
+    -moz-box-shadow: inset 0 0 5px limegreen;
+    -webkit-box-shadow: inset 0 0 5px limegreen;
+    box-shadow: inset 0 0 5px limegreen;
 }
 
 .footLink:nth-child(1){
     font-size: 2.5rem;
-    background: rgba(0, 0,0, 0.2);
+    padding: 1rem 5rem;
+    background: radial-gradient(rgba(0, 0,0, 0.6), rgba(0, 0,0, 0.3), rgba(50, 205, 50, 0.3));
+    border-radius: 35%;
+    border: transparent;
+    display: flex;
+    flex-grow: 0.4;
 }
 
 .footLink:hover {
