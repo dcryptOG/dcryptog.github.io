@@ -378,6 +378,8 @@ a {
     font-family: 'IBM Plex Serif', serif;
     font-size: 3em;
     font-weight: bolder;
+    display: flex;
+    justify-content: center;
     padding: 0;
     width: 100%;
     margin: 1rem;
@@ -421,6 +423,10 @@ picture>img {
 
 #coverLetterBox>article {
     text-align: left;
+    line-height: 1.5;
+    font-weight: 500;
+    letter-spacing: 0.05vw;
+    font-stretch: expanded;
 }
 
 #coverLetter>picture {
@@ -431,6 +437,17 @@ picture>img {
     min-width: 30%;
     width: 20vw;
     height: 20vw;
+}
+
+.qualifyItem>#mCATScoreBox {
+    flex-grow: 2;
+}
+
+#mCATScoreBox {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid limegreen;
 }
 
 #coverLetter>picture>img {
@@ -490,6 +507,7 @@ picture>img {
     box-sizing: border-box;
     object-fit: contain;
     margin: 1rem;
+    letter-spacing: 0.05vw;
 }
 
 .qualifyContent>p:first-child {
@@ -523,6 +541,10 @@ picture>img {
 
 .qualifyItem p {
     text-align: left;
+}
+
+#mCATScore {
+    text-decoration: underline;
 }
 
 #skillItem>p:nth-child(2) {
