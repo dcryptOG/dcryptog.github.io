@@ -59,6 +59,8 @@ body {
     height: 100vh;
 }
 
+/*GLOBAL ELEMENTS ======================================================================= */
+
 .flex-container {
     display: flex;
     margin: auto;
@@ -71,30 +73,31 @@ a {
     color: black;
 }
 
-.arrowDown {
-    width: 0;
-    height: 0;
-    border-left: 1rem solid transparent;
-    border-right: 1rem solid transparent;
-    border-top: 1rem solid black;
+picture {
+    display: flex;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-grow: 1;
 }
 
-.arrowRight {
-    width: 0;
-    height: 0;
-    border-top: 1rem solid transparent;
-    border-bottom: 1rem solid transparent;
-    border-left: 1rem solid black;
+picture>img {
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    overflow: hidden;
+    box-sizing: border-box;
+    object-fit: contain;
 }
 
 .pad {
     width: 100%;
-    background: black;
     display: flex;
     margin: auto;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-    border: 0.1vw solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 2rem;
+    padding-top: 2rem;
 }
 
 /*==============================TOP SECTION=======================================================================*/
@@ -114,6 +117,22 @@ a {
     margin: auto;
     align-items: center;
     text-align: center;
+}
+
+.arrowDown {
+    width: 0;
+    height: 0;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-top: 1rem solid black;
+}
+
+.arrowRight {
+    width: 0;
+    height: 0;
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+    border-left: 1rem solid black;
 }
 
 /* TITLE************************************************************************************** */
@@ -155,15 +174,19 @@ a {
     0% {
         background: linear-gradient(to bottom right, rgba(34, 139, 34, 1), rgba(50, 205, 50, 1));
     }
+
     25% {
         background: linear-gradient(to bottom right, rgba(34, 139, 34, 0.8), rgba(50, 205, 50, 0.8));
     }
+
     50% {
         background: linear-gradient(to bottom right, rgba(34, 139, 34, 0.6), rgba(50, 205, 50, 0.6));
     }
+
     75% {
         background: linear-gradient(to bottom right, rgba(34, 139, 34, 0.4), rgba(50, 205, 50, 0.4));
     }
+
     100% {
         background: linear-gradient(to bottom right, rgba(34, 139, 34, 0.2), rgba(50, 205, 50, 0.2));
     }
@@ -301,9 +324,11 @@ a {
         display: none;
         width: 0%;
     }
+
     .title {
         font-size: 5vw;
     }
+
     .navPad {
         width: 0%;
     }
@@ -313,6 +338,7 @@ a {
     .titleBox {
         display: none;
     }
+
     .mobileDropBox {
         position: relative;
         width: 100%;
@@ -425,7 +451,6 @@ a {
     background: linear-gradient(to bottom right, rgba(34, 139, 34, 0.9), rgba(50, 205, 50, 0.9));
     text-decoration: none;
     border: 0.1rem solid black;
-    padding: 1rem;
     font-family: 'IBM Plex Serif', serif;
     font-size: 3em;
     font-weight: bolder;
@@ -434,25 +459,6 @@ a {
     padding: 0;
     width: 100%;
     margin: 1rem;
-}
-
-picture {
-    display: flex;
-    box-sizing: border-box;
-    overflow: hidden;
-    flex-grow: 1;
-}
-
-picture>img {
-    display: flex;
-    width: 100%;
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
-    flex-grow: 1;
-    overflow: hidden;
-    box-sizing: border-box;
-    object-fit: contain;
 }
 
 /* INDEX COVER LETTER STYLES*************** */
