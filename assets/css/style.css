@@ -68,6 +68,11 @@ body {
     align-items: center;
 }
 
+.fun {
+    height: 25vh;
+    width: 25vw;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -78,13 +83,14 @@ picture {
     box-sizing: border-box;
     overflow: hidden;
     flex-grow: 1;
+    margin: auto;
 }
 
 picture>img {
     display: flex;
     width: 100%;
     min-height: 100%;
-    margin: 0;
+    margin: auto;
     padding: 0;
     flex-grow: 1;
     overflow: hidden;
@@ -110,8 +116,9 @@ picture>img {
     position: fixed;
     top: 0;
     width: 100%;
-    border-bottom: 5px solid black;
-    background: linear-gradient(to bottom right, forestgreen, limegreen);
+    border-bottom: 0.2em solid black;
+    background-image: url(../img/spaceNorLights.jpg);
+    background-size: contain;
     display: inline-flex;
     flex-flow: row wrap;
     margin: auto;
@@ -165,9 +172,9 @@ picture>img {
     border: 0.5rem solid white;
 }
 
+/* 
 #top:hover {
     animation: pulse 3s infinite;
-    /* -webkit-animation: pulse 1s infinite alternate; */
 }
 
 @keyframes pulse {
@@ -190,7 +197,7 @@ picture>img {
     100% {
         background: linear-gradient(to bottom right, rgba(34, 139, 34, 0.2), rgba(50, 205, 50, 0.2));
     }
-}
+} */
 
 /* ===========================================MOBILE NAV************************************************* */
 
@@ -685,14 +692,14 @@ input[type=submit]:hover {
 }
 
 .workBox {
-    width: 25vw;
-    min-height: 25vh;
-    flex-grow: 1;
+    width: 20vw;
+    min-height: 20vh;
+    /* flex-grow: 1; */
     overflow: hidden;
     border: 1rem solid black;
     outline: .1rem solid limegreen;
     padding: 0.1rem;
-    margin: auto;
+    margin: 1rem;
     box-sizing: border-box;
     background: linear-gradient(to bottom right, forestgreen, limegreen);
 }
@@ -718,7 +725,7 @@ input[type=submit]:hover {
 }
 
 .workTitle {
-    font-family: 'IBM Plex serif', serif;
+    font-family: var(--font-heading);
     font-size: var(--size-mid);
 }
 
@@ -741,7 +748,8 @@ input[type=submit]:hover {
     height: 50%;
     border-top: 0.1rem solid limegreen;
     outline: 1px solid limegreen;
-    background-image: url(../img/footerbg.jpg);
+    background-image: url(../img/background.jpg);
+    background-size: contain;
     -moz-box-shadow: inset 0 0 100px black;
     -webkit-box-shadow: inset 0 0 100px black;
     box-shadow: inset 0 0 100px black;
