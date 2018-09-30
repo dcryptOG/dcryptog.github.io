@@ -11,7 +11,7 @@
     --color-blue: rgba(34, 190, 198, 1);
     /* fonts */
     --font-main: 'Josefin Sans', sans-serif;
-    --font-heading: 'Source Sans Pro', sans-serif;
+    --font-heading: 'Lobster', cursive;
     /* font-sizes */
     --size-normal: 1rem;
     --size-mid: 1.5rem;
@@ -53,7 +53,7 @@ body {
     align-self: auto;
     justify-self: auto;
     margin: auto;
-    background: url(../img/websitebg.jpg) no-repeat center center fixed;
+    background: url(../img/background.jpg) no-repeat center center fixed;
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -140,8 +140,8 @@ picture>img {
 .title {
     background: black;
     color: limegreen;
-    font-size: 4rem;
-    font-family: 'IBM Plex Serif', serif;
+    font-size: var(--size-big);
+    font-family: var(--font-heading);
     font-style: italic;
     font-weight: bolder;
     padding: inherit;
@@ -308,7 +308,7 @@ picture>img {
 .topNav {
     width: 100%;
     align-items: center;
-    font-size: 2rem;
+    font-size: var(--size-mid);
     display: inline-flex;
     justify-content: space-between;
 }
@@ -435,7 +435,7 @@ picture>img {
     flex-flow: column wrap;
     word-break: break-word;
     font-style: inherit;
-    font-size: 2rem;
+    font-size: var(--size-normal);
 }
 
 .aboutTitleBox {
@@ -449,8 +449,8 @@ picture>img {
     background: linear-gradient(to bottom right, rgba(34, 139, 34, 0.9), rgba(50, 205, 50, 0.9));
     text-decoration: none;
     border: 0.1rem solid black;
-    font-family: 'IBM Plex Serif', serif;
-    font-size: 3em;
+    font-family: var(--font-heading);
+    font-size: var(--size-big);
     font-weight: bolder;
     display: flex;
     justify-content: center;
@@ -526,7 +526,7 @@ picture>img {
     padding: 0;
     top: 0;
     text-shadow: 0 0 0.5px limegreen;
-    font-size: 4rem;
+    font-size: var(--size-big);
     flex-grow: stretch;
 }
 
@@ -553,7 +553,7 @@ picture>img {
     background: linear-gradient(to bottom right, rgba(34, 139, 34, 0.3), rgba(50, 205, 50, 0.3));
     border: 0.1rem solid black;
     border-radius: .1rem;
-    font-size: 2.5em;
+    font-size: var(--size-big);
     font-family: 'IBM Plex Serif', serif;
     font-weight: bolder;
 }
@@ -578,7 +578,7 @@ picture>img {
     color: black;
     margin-top: 0;
     background: rgba(0, 0, 0, 0.01);
-    font-size: 3rem;
+    font-size: var(--size-big);
     border: none;
     word-spacing: 0.5em;
     font-family: 'IBM Plex Serif', serif;
@@ -640,7 +640,7 @@ picture>img {
 /* ============================CONTACT HTML============================================= */
 
 label {
-    font-size: 2rem;
+    font-size: var(--size-normal);
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
@@ -662,7 +662,7 @@ input[type=submit] {
     background-color: black;
     font-family: inherit;
     font-weight: inherit;
-    font-size: 2rem;
+    font-size: var(--size-normal);
     color: limegreen;
     padding: 12px 20px;
     border: 5px solid limegreen;
@@ -719,7 +719,7 @@ input[type=submit]:hover {
 
 .workTitle {
     font-family: 'IBM Plex serif', serif;
-    font-size: 2rem;
+    font-size: var(--size-mid);
 }
 
 /* ==========================================STICKY FOOTER=================================================== */
@@ -761,12 +761,12 @@ input[type=submit]:hover {
     color: whitesmoke;
     text-shadow: 0 0 4px limegreen;
     margin: 0.5rem;
-    font-size: 2rem;
+    font-size: var(--size-normal);
 }
 
 .footLink:nth-child(2) {
     border-radius: 50%;
-    font-size: 2.5rem;
+    font-size: var(--size-normal);
     height: 3rem;
     width: 3rem;
     padding: 1rem;
@@ -778,7 +778,7 @@ input[type=submit]:hover {
 }
 
 .footLink:first-child {
-    font-size: 2.5rem;
+    font-size: var(--size-normal);
     padding: 1rem 5rem;
     background: radial-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3), rgba(50, 205, 50, 0.3));
     border-radius: 35%;
