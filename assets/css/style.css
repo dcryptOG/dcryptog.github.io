@@ -695,6 +695,8 @@ input:focus,
     }
 }
 
+.contentTitle,
+.contentSubTitle,
 .galleryNav {
     background: linear-gradient(to right, rgba(69, 194, 197, 0.5) 19%, rgba(53, 206, 229, 0.5) 40%, rgba(245, 245, 245, 0.5) 83%, rgba(69, 194, 197, 0.5) 100%);
     background-size: 100vw;
