@@ -557,6 +557,7 @@ input:focus {
     padding: var(--gapSmall);
 }
 
+
 .galleryNav:hover,
 image:hover,
 p:hover,
@@ -694,86 +695,109 @@ input:focus,
     }
 }
 
-/* 
- {
-    animation: wobble 6s infinite;
+.galleryNav {
+    background: linear-gradient(to right, rgba(69, 194, 197, 0.5) 19%, rgba(53, 206, 229, 0.5) 40%, rgba(245, 245, 245, 0.5) 83%, rgba(69, 194, 197, 0.5) 100%);
+    background-size: 100vw;
+    animation: bg 9s linear infinite;
+    will-change: opacity;
+    transition: opacity 0.3s ease-out;
 }
 
-@-webkit-keyframes wobble {
-    from {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
+@keyframes bg {
+    0% {
+        background-position-x: 0vw;
     }
 
-    15% {
-        -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
-        transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    100% {
+        background-position-x: 100vw;
+    }
+
+    0% {
+        background-position-x: 0vw;
+    }
+}
+
+a:hover,
+.drop:hover,
+    {
+    animation: rubberBand 5s infinite;
+}
+
+@-webkit-keyframes rubberBand {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
     }
 
     30% {
-        -webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
-        transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
     }
 
-    45% {
-        -webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
-        transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
     }
 
-    60% {
-        -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
-        transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+        transform: scale3d(0.95, 1.05, 1);
     }
 
     75% {
-        -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
-        transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+        transform: scale3d(1.05, 0.95, 1);
     }
 
     to {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
     }
 }
 
-@keyframes wobble {
+@keyframes rubberBand {
     from {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
-
-    15% {
-        -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
-        transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
     }
 
     30% {
-        -webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
-        transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
     }
 
-    45% {
-        -webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
-        transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
     }
 
-    60% {
-        -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
-        transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+        transform: scale3d(0.95, 1.05, 1);
     }
 
     75% {
-        -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
-        transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+        transform: scale3d(1.05, 0.95, 1);
     }
 
     to {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
     }
 }
 
-.wobble {
-    -webkit-animation-name: wobble;
-    animation-name: wobble;
-} */
+.rubberBand {
+    -webkit-animation-name: rubberBand;
+    animation-name: rubberBand;
+}
