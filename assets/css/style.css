@@ -1,5 +1,3 @@
-/* GLOBALS ======================================================================================== */
-
 :root {
     /* declare variables here... on :root pseudo-class */
     /* colours */
@@ -28,6 +26,19 @@
     --borderMed: 0.1rem;
 }
 
+@media screen and (max-width: 400px) {
+
+    :root {
+        --size-normal: 2vw;
+        --size-mid: 3vw;
+        --size-big: 4vw;
+    }
+
+    html {
+        font-size: 2vw;
+    }
+}
+
 html {
     /* make sure we use up the whole viewport */
     width: 100%;
@@ -46,6 +57,7 @@ html {
 *:after {
     box-sizing: inherit;
 }
+
 
 body {
     display: flex;
