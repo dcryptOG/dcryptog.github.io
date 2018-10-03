@@ -207,7 +207,7 @@ a {
 
 .content {
     flex: 1 0 auto;
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-flow: column wrap;
     word-break: break-word;
@@ -277,6 +277,16 @@ a {
 
 #coverPhotoBox>a>picture {
     border-radius: var(--borderMed);
+}
+
+#coverLetter>p {
+    background: rgba(245, 245, 245, 0.5);
+    padding: var(--gapMed);
+    line-height: 2;
+}
+
+#coverLetter>p::first-letter {
+    color: rgba(255, 255, 255, 0);
 }
 
 /* #coverLetter>picture>img {} */
