@@ -66,9 +66,21 @@ body {
     justify-self: auto;
     margin: auto;
     background: url(../img/paradisebg.jpg) no-repeat center center fixed;
-    background-size: cover;
+    background-size: contain;
     width: 100vw;
     height: 100vh;
+    background-repeat: repeat-x;
+    animation: animatedBackground 40s linear infinite;
+}
+
+@keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 100vw 0;
+    }
 }
 
 /*GLOBAL ELEMENTS ======================================================================= */
