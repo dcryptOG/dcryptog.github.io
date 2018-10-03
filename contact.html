@@ -65,12 +65,56 @@
                 <div class='navPad'>
                 </div>
 
-                <div class="dropDown" role='navigation'>
-                    <a href='index.html' class='hoverLink'>About<span class='arrowDown'></a>
+                <style>
+
+                    .drop>a:first-child{
+    position: relative;
+    text-align: center;
+    color: black;
+    margin: .5rem;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    text-shadow: 0 0 4px white;
+}
+
+  .drop>a:first-child~span {
+    position: absolute;
+    display: none;
+    margin: auto;
+    text-align: center;
+    background: linear-gradient(to bottom right, black, grey);
+    padding: 0 2rem;
+}
+
+
+.drop:hover>a:first-child~span {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.dropItem:hover {
+    background: black;
+    color: white;
+    border: .1vw solid white;
+}
+
+.dropItem {
+    border: 0.1vw solid black;
+    padding: 2rem;
+    object-fit: fill;
+    background: limegreen;
+}
+                </style>
+
+                <div class="drop" role='navigation'>
+                    <a href='index.html'>About</a>
                     <span class="dropContent">
-                        <a href="https://dcryptog.github.io/#coverLetter" class='dropItem'>Intro</a>
-                        <a href="https://dcryptog.github.io/#qualifications" class='dropItem'>Resume</a>
-                        <a href="https://dcryptog.github.io/#extResources" class='dropItem'>LinkedIn</a>
+                        <a href="https://dcryptog.github.io/#coverLetter">Intro</a>
+                        <a href="https://dcryptog.github.io/#qualifications">Resume</a>
+                        <a href="https://dcryptog.github.io/#extResources">LinkedIn</a>
                     </span>
                 </div>
 
