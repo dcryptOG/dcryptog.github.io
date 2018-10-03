@@ -473,6 +473,21 @@ picture>img {
 
 /* ============================CONTACT HTML============================================= */
 
+.contentTitle {
+    display: flex;
+    flex-flow: row wrap;
+    font-family: var(--font-heading);
+    font-size: var(--size-med);
+    font-weight: var(--borderMed);
+    justify-content: center;
+    width: 80vw;
+    background: rgba(245, 245, 245, 0.5);
+    text-align: center;
+    border: 0.05rem solid rgba(245, 245, 245, 0.3);
+    border-radius: 0.1rem;
+    padding: var(--gapSmall);
+}
+
 form {
     flex-flow: column wrap;
     margin: 0 auto;
@@ -480,14 +495,10 @@ form {
 }
 
 form>.flex-container>p {
-    background: rgba(229, 57, 53, 0.8);
     font-size: var(--size-normal);
     font-weight: var(--weight-bold);
-    width: 80vw;
     text-align: center;
-    border: 0.05rem solid rgba(245, 245, 245, 0.3);
-    border-radius: 0.1rem;
-    padding: 0.5rem;
+    padding: var(--gapSmall);
 }
 
 form>.flex-container>input {
