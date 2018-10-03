@@ -241,75 +241,57 @@ a {
     margin: 2em auto;
 }
 
+.sidePad {
+    display: flex;
+    margin: auto 1vw;
+}
+
 
 /* =============================================INDEX HTML========================================================== */
 
-.aboutContainer {
-    display: flex;
-    flex-flow: column wrap;
-    word-break: break-word;
-    font-style: inherit;
-    font-size: var(--size-normal);
-}
-
-.aboutTitleBox {
-    margin: 1rem;
-    padding: 1rem;
-    border-bottom: 0.3rem solid black;
-    display: flex;
-}
-
-.aboutTitleBox>a {
-    background: linear-gradient(to bottom right, rgba(34, 139, 34, 0.9), rgba(50, 205, 50, 0.9));
-    text-decoration: none;
-    border: 0.1rem solid black;
-    font-family: var(--font-heading);
-    font-size: var(--size-big);
-    font-weight: bolder;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    width: 100%;
-    margin: 1rem;
-}
 
 /* INDEX COVER LETTER STYLES*************** */
 
-#coverLetterBox {
-    background: rgba(255, 255, 255, 0.5);
-    border: 0.1rem solid black;
-    border-radius: 0.5rem;
-    padding: 0rem 5rem;
-    display: flex;
-    flex-flow: row wrap;
-    margin: auto;
-}
 
 #coverLetter {
     display: inline-flex;
+    width: 85vw;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: auto;
 }
 
-#coverLetterBox>article {
-    text-align: left;
-    line-height: 1.5;
-    font-weight: 500;
-    letter-spacing: 0.05vw;
-    font-stretch: expanded;
+#coverPhotoBox {
+    border-radius: var(--borderSm);
 }
 
-#coverLetter>picture {
-    background: rgba(0, 0, 0, 0.9);
-    padding: 1rem;
-    border-radius: 0.5rem;
-    border: 0.1rem solid limegreen;
-    min-width: 30%;
-    width: 20vw;
-    height: 20vw;
+#coverPhotoBox>a>picture {
+    border-radius: var(--borderMed);
 }
 
 /* #coverLetter>picture>img {} */
 
 /* INDEX QUALIFICATIONS STYLES*************** */
+.contentTitleBox {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+.contentTitle {
+    display: flex;
+    flex-flow: row wrap;
+    font-family: var(--font-heading);
+    font-size: var(--size-med);
+    font-weight: var(--borderMed);
+    justify-content: center;
+    width: 90vw;
+    background: rgba(245, 245, 245, 0.5);
+    text-align: center;
+    border: 0.05rem solid rgba(245, 245, 245, 0.3);
+    border-radius: 0.1rem;
+    padding: var(--gapSmall);
+}
 
 .qualifyItem>#mCATScoreBox {
     flex-grow: 2;
@@ -322,92 +304,8 @@ a {
     border: 0.1rem solid limegreen;
 }
 
-#coverLetterBox>article>p::first-letter {
-    font-size: 200%;
-    color: limegreen;
-    margin-left: 5rem;
-    text-shadow: -0.1rem 0 black, 0 0.1rem black, 0.1rem 0 black, 0 -0.1rem black;
-}
 
-#qualify {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-}
 
-.qualifyTitle {
-    font-family: 'Josefin Sans', sans-serif;
-    padding: 0;
-    top: 0;
-    text-shadow: 0 0 0.5px limegreen;
-    font-size: var(--size-big);
-    flex-grow: stretch;
-}
-
-.qualifyBox {
-    border-radius: 0.5rem;
-    padding: 0rem 5rem;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    flex-grow: 1;
-    box-sizing: border-box;
-    object-fit: contain;
-    margin: 1rem;
-}
-
-.qualifyContent {
-    height: 100%;
-    width: 100%;
-}
-
-.qualifyContent>p:first-child {
-    margin-top: 0;
-    color: black;
-    background: linear-gradient(to bottom right, rgba(34, 139, 34, 0.3), rgba(50, 205, 50, 0.3));
-    border: 0.1rem solid black;
-    border-radius: .1rem;
-    font-size: var(--size-big);
-    font-family: 'IBM Plex Serif', serif;
-    font-weight: bolder;
-}
-
-.qualifyItem {
-    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.4) 60%, rgba(0, 0, 0, 0.1));
-    border: 0.1rem solid rgba(50, 205, 50, 0.5);
-    outline: 0.1rem solid rgba(0, 0, 0, 0.5);
-    border-radius: 0.5rem;
-    padding: 0rem 5rem;
-    display: flex;
-    flex-flow: column wrap;
-    flex-grow: 1;
-    box-sizing: border-box;
-    object-fit: contain;
-    margin: 1rem;
-    letter-spacing: 0.05vw;
-}
-
-.qualifyItem>p:first-child {
-    text-align: center;
-    color: black;
-    margin-top: 0;
-    background: rgba(0, 0, 0, 0.01);
-    font-size: var(--size-big);
-    border: none;
-    word-spacing: 0.5em;
-    font-family: 'IBM Plex Serif', serif;
-    font-weight: bolder;
-    border-bottom: 0.1rem double black;
-    padding: 1rem;
-}
-
-.qualifyItem>p:nth-child(2) {
-    text-align: center;
-}
-
-.qualifyItem p {
-    text-align: left;
-}
 
 #mCATScore {
     text-decoration: underline;
@@ -417,56 +315,10 @@ a {
     text-align: left;
 }
 
-/* EXTERNAL RESOURCES STYLES ******************** */
 
-#linkedIn>.qualifyItem {
-    align-items: center;
-    padding: 2rem;
-    flex-grow: 2;
-}
-
-#linkedIn>.qualifyItem>p {
-    width: 100%;
-}
-
-#linkedIn>.qualifyItem>a>p {
-    text-align: center;
-    font-weight: bolder;
-    font-style: italic;
-}
-
-#linkedIn>.qualifyItem>a {
-    background: rgba(50, 205, 50, 0.5);
-    border: 0.1rem solid black;
-    border-radius: 0.5rem;
-    width: 100%;
-}
-
-#linkedIn>.qualifyItem>a>picture {
-    background: black;
-    padding: 0.5rem;
-}
-
-#linkedIn>.qualifyItem>a>picture>img {
-    border: 0.1rem solid rgba(50, 205, 50, 0.5);
-}
 
 /* ============================CONTACT HTML============================================= */
 
-.contentTitle {
-    display: flex;
-    flex-flow: row wrap;
-    font-family: var(--font-heading);
-    font-size: var(--size-med);
-    font-weight: var(--borderMed);
-    justify-content: center;
-    width: 80vw;
-    background: rgba(245, 245, 245, 0.5);
-    text-align: center;
-    border: 0.05rem solid rgba(245, 245, 245, 0.3);
-    border-radius: 0.1rem;
-    padding: var(--gapSmall);
-}
 
 form {
     flex-flow: column wrap;
@@ -532,13 +384,13 @@ textarea:focus {
 
 /* ====================================PORTFOLIO HTML================================================= */
 
-.workNav {
+.galleryNav {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
 }
 
-.workBox {
+.galleryBox {
     width: 20vw;
     min-height: 20vh;
     /* flex-grow: 1; */
@@ -548,7 +400,7 @@ textarea:focus {
     background: linear-gradient(to bottom right, forestgreen, limegreen);
 }
 
-.workBox>a>picture {
+.galleryBox>a>picture {
     margin: 0;
     padding: 0;
     flex-grow: 1;
@@ -557,7 +409,7 @@ textarea:focus {
     object-fit: fill;
 }
 
-.workBox>a>picture>img {
+.galleryBox>a>picture>img {
     margin: 0;
     padding: 0;
     flex-grow: 1;
@@ -566,21 +418,22 @@ textarea:focus {
     object-fit: fill;
 }
 
-.workBox:hover {
+.galleryBox:hover {
     background: white;
     -moz-box-shadow: inset 0 0 50px limegreen;
     -webkit-box-shadow: inset 0 0 50px limegreen;
     box-shadow: inset 0 0 50px limegreen;
 }
 
-.workBox:hover>.workTitle {
+.galleryBox:hover>.workTitle {
     color: white;
 }
 
-.workTitle {
+.galleryTitle {
     font-family: var(--font-heading);
     font-weight: var(--borderMed);
     font-size: var(--size-mid);
+    text-align: center;
 }
 
 /* ==========================================STICKY FOOTER=================================================== */
