@@ -75,6 +75,7 @@ body {
     margin: auto;
     background: url(../img/paradisebg.jpg) no-repeat center center fixed;
     background-size: contain;
+    /* background: var(--blue-med); */
     width: 100vw;
     height: 100vh;
     background-repeat: repeat-x;
@@ -123,6 +124,8 @@ a {
 .top {
     display: flex;
     z-index: 1;
+    justify-content: space-between;
+    flex-flow: row wrap;
 }
 
 #top {
@@ -133,18 +136,27 @@ a {
     border-bottom: 0.2em solid black;
     background-image: url(../img/spaceNorLights.jpg);
     background-size: contain;
-    display: inline-flex;
+    display: flex;
+    justify-content: flex-start;
     flex-flow: row wrap;
     margin: auto;
     align-items: center;
     text-align: center;
 }
 
+.topNav {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
 /* TITLE************************************************************************************** */
 
 .title {
     background: black;
-    color: limegreen;
+    color: var(--blue-med);
     font-size: var(--size-title);
     padding: var(--gapLarge);
     font-family: var(--font-heading);
@@ -154,8 +166,8 @@ a {
 }
 
 .titleBox {
+    margin-left: 0;
     background: black;
-    border: 0.5rem double limegreen;
     padding: 1rem;
     display: inline-flex;
     flex-flow: row wrap;
@@ -173,6 +185,9 @@ a {
 /* topNav======================================================================================= */
 .drop {
     display: block;
+    margin-right: 3em;
+    font-size: --var(size-XL);
+    font-weight:bolder;
 }
 
 .drop>a:first-child {
@@ -203,17 +218,15 @@ a {
 
 /* =======================================DROP NAV================================== */
 
-.navPad {
-    width: 40%;
-}
 
-.topNav {
+/* .topNav {
     width: 100%;
     align-items: center;
-    font-size: var(--size-mid);
+    font-size: --var(size-XL);
+    font-weight:bolder;
     display: inline-flex;
     justify-content: space-between;
-}
+} */
 
 /*  =============================CONTNET==============================================*/
 
@@ -274,6 +287,12 @@ a {
     display: flex;
     margin: auto 1vw;
 }
+
+.sidePadL {
+    display: flex;
+    margin: auto 2em;
+}
+
 
 
 /* =============================================INDEX HTML========================================================== */
