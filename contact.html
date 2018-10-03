@@ -9,7 +9,9 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lobster" rel="stylesheet">
     <link rel='stylesheet' type='text/css' href='assets/css/style.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
     <title>Geoff Dotson</title>
 </head>
 
@@ -65,39 +67,45 @@
     <section class='content'>
         <div class='flex-container' id='contentPad'></div>
         <div class='flex-container' id='content'>
-            <form class='flex-container'>
-                <div class='flex-container'>
-                    <p class='contentTitle'>Contact Me</p>
-                </div>
-                <div class='flex-container'>
-                    <p>Name</p>
-                </div>
-                <div class='flex-container'>
-                    <input type="text" class='textInput' id="name" name='textInput' required placeholder="First Last">
-                </div>
-                <div class='flex-container'>
-                    <p>Email</p>
-                </div>
-                <div class='flex-container'>
-                    <input type="text" class='textInput' id="email" name='textInput' required placeholder="example@email.com">
-                </div>
-                <div class='flex-container'>
-                    <p>Subject</p>
-                </div>
-                <div class='flex-container'>
-                    <textarea id='subject' class='textInput' placeholder='Write something..'></textarea>
-                </div>
-                <div class="flex-container">
-                    <button>Submit</button>
-                </div>
-            </form>
+            <div class='flex-container moment'>
+                <div id="moment"></div>
+
+            </div>
+        </div>
+        <form class='flex-container'>
+            <div class='flex-container'>
+                <p class='contentTitle'>Contact Me</p>
+            </div>
+            <div class='flex-container'>
+                <p>Name</p>
+            </div>
+            <div class='flex-container'>
+                <input type="text" class='textInput' id="name" name='textInput' required placeholder="First Last">
+            </div>
+            <div class='flex-container'>
+                <p>Email</p>
+            </div>
+            <div class='flex-container'>
+                <input type="text" class='textInput' id="email" name='textInput' required placeholder="example@email.com">
+            </div>
+            <div class='flex-container'>
+                <p>Subject</p>
+            </div>
+            <div class='flex-container'>
+                <textarea id='subject' class='textInput' placeholder='Write something..'></textarea>
+            </div>
+            <div class="flex-container">
+                <button>Submit</button>
+            </div>
+        </form>
+
         </div>
     </section>
 
     <section id='footer'>
         <div class="content"></div>
         <div class="footPad">
-            <p>hello</p>
+
         </div>
         <footer class="footer">
             <nav class='footNav'>
@@ -110,7 +118,8 @@
 </body>
 
 </html>
-
+<script src="assets/js/app.js"></script>
+</script>
 <!-- 
     STEPS
 

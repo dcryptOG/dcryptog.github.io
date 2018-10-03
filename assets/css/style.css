@@ -187,7 +187,7 @@ a {
     display: block;
     margin-right: 3em;
     font-size: --var(size-XL);
-    font-weight:bolder;
+    font-weight: bolder;
 }
 
 .drop>a:first-child {
@@ -215,18 +215,6 @@ a {
     display: flex;
     flex-flow: column wrap;
 }
-
-/* =======================================DROP NAV================================== */
-
-
-/* .topNav {
-    width: 100%;
-    align-items: center;
-    font-size: --var(size-XL);
-    font-weight:bolder;
-    display: inline-flex;
-    justify-content: space-between;
-} */
 
 /*  =============================CONTNET==============================================*/
 
@@ -444,6 +432,15 @@ textarea:focus {
     outline: 0.05rem solid rgba(229, 57, 53, 0.8);
 }
 
+/* #divUsa {
+
+} */
+
+.moment {
+    justify-content: center;
+    width: 100vw;
+    flex-flow: row wrap;
+}
 
 /* ====================================PORTFOLIO HTML================================================= */
 
