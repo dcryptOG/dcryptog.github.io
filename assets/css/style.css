@@ -198,32 +198,36 @@ picture>img {
     border: 0.5rem solid white;
 }
 
-/* 
-#top:hover {
-    animation: pulse 3s infinite;
+/* topNav======================================================================================= */
+.drop {
+    display: block;
 }
 
-@keyframes pulse {
-    0% {
-        background: linear-gradient(to bottom right, rgba(34, 139, 34, 1), rgba(50, 205, 50, 1));
-    }
+.drop>a:first-child {
+    position: relative;
+    text-align: center;
+    color: black;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+}
 
-    25% {
-        background: linear-gradient(to bottom right, rgba(34, 139, 34, 0.8), rgba(50, 205, 50, 0.8));
-    }
+.drop>a:first-child~span {
+    position: absolute;
+    display: none;
+    padding: 0;
+    margin: auto;
+    text-align: left;
+    background: whitesmoke;
+}
 
-    50% {
-        background: linear-gradient(to bottom right, rgba(34, 139, 34, 0.6), rgba(50, 205, 50, 0.6));
-    }
 
-    75% {
-        background: linear-gradient(to bottom right, rgba(34, 139, 34, 0.4), rgba(50, 205, 50, 0.4));
-    }
-
-    100% {
-        background: linear-gradient(to bottom right, rgba(34, 139, 34, 0.2), rgba(50, 205, 50, 0.2));
-    }
-} */
+.drop:hover>a:first-child~span {
+    display: flex;
+    flex-flow: column wrap;
+}
 
 /* ===========================================MOBILE NAV************************************************* */
 
@@ -376,54 +380,6 @@ picture>img {
         position: relative;
         width: 100%;
     }
-}
-
-.hoverLink {
-    position: relative;
-    text-align: center;
-    color: black;
-    margin: .5rem;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    text-shadow: 0 0 4px white;
-}
-
-.dropContent {
-    position: absolute;
-    display: none;
-    margin: auto;
-    text-align: center;
-    background: linear-gradient(to bottom right, black, grey);
-    padding: 0 2rem;
-}
-
-.dropDown:hover>.hoverLink {
-    background: linear-gradient(to bottom right, black, grey);
-    color: white;
-    border: 5px double black;
-    border-radius: 0.5rem;
-    margin: 0;
-}
-
-.dropDown:hover>.dropContent {
-    display: flex;
-    flex-flow: column wrap;
-}
-
-.dropItem:hover {
-    background: black;
-    color: white;
-    border: .1vw solid white;
-}
-
-.dropItem {
-    border: 0.1vw solid black;
-    padding: 2rem;
-    object-fit: fill;
-    background: limegreen;
 }
 
 /*  =============================CONTNET MISC==============================================*/

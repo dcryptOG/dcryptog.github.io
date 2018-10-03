@@ -67,26 +67,28 @@
 
                 <style>
 
+                    .drop {
+                        display: block;
+                    }
+
                     .drop>a:first-child{
     position: relative;
     text-align: center;
     color: black;
-    margin: .5rem;
+    margin: 0 auto;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-around;
-    width: 100%;
-    text-shadow: 0 0 4px white;
 }
 
   .drop>a:first-child~span {
     position: absolute;
     display: none;
+    padding: 0;
     margin: auto;
-    text-align: center;
-    background: linear-gradient(to bottom right, black, grey);
-    padding: 0 2rem;
+    text-align: left;
+    background: whitesmoke;
 }
 
 
@@ -94,44 +96,40 @@
     display: flex;
     flex-flow: column wrap;
 }
-
-.dropItem:hover {
-    background: black;
-    color: white;
-    border: .1vw solid white;
-}
-
-.dropItem {
-    border: 0.1vw solid black;
-    padding: 2rem;
-    object-fit: fill;
-    background: limegreen;
-}
                 </style>
 
                 <div class="drop" role='navigation'>
-                    <a href='index.html'>About</a>
-                    <span class="dropContent">
+                    <a href='index.html'>Mobile</a>
+                    <span>
                         <a href="https://dcryptog.github.io/#coverLetter">Intro</a>
                         <a href="https://dcryptog.github.io/#qualifications">Resume</a>
                         <a href="https://dcryptog.github.io/#extResources">LinkedIn</a>
                     </span>
                 </div>
 
-                <div class="dropDown" role='navigation'>
-                    <a href='portfolio.html' class='hoverLink'>Portfolio<span class='arrowDown'></a>
-                    <span class="dropContent">
-                        <a href="#" class='dropItem'>Karaokee</a>
-                        <a href="#" class='dropItem'>Star Wars Game</a>
-                        <a href="#" class='dropItem'>Train Schedules: Firebase</a>
-                        <a href="#" class='dropItem'>Giphy API</a>
-                        <a href="#" class='dropItem'>Trivia: Timers</a>
+                <div class="drop" role='navigation'>
+                    <a href='index.html'>About</a>
+                    <span>
+                        <a href="https://dcryptog.github.io/#coverLetter">Intro</a>
+                        <a href="https://dcryptog.github.io/#qualifications">Resume</a>
+                        <a href="https://dcryptog.github.io/#extResources">LinkedIn</a>
                     </span>
                 </div>
 
-                <div class="dropDown" role='navigation'>
-                    <a href='contact.html' class='hoverLink'>Contact</a>
-                    <span class="dropContent">
+                <div class="drop" role='navigation'>
+                    <a href='portfolio.html'>Portfolio</a>
+                    <span>
+                        <a href="#">Karaokee</a>
+                        <a href="#">Star Wars Game</a>
+                        <a href="#">Train Schedules: Firebase</a>
+                        <a href="#">Giphy API</a>
+                        <a href="#">Trivia: Timers</a>
+                    </span>
+                </div>
+
+                <div class="drop" role='navigation'>
+                    <a href='contact.html'>Contact</a>
+                    <span>
                     </span>
                 </div>
             </nav>
