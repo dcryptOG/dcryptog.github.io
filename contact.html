@@ -65,23 +65,34 @@
     <section class='content'>
         <div class='flex-container' id='contentPad'></div>
         <div class='flex-container' id='content'>
-            <form action='/action_page.php' class='animated bounceOutUp'>
-                <label for='fname'>Name</label>
-                <input type='text' id='name' name='name' placeholder='First and Last'>
-
-                <label for='email'>Email</label>
-                <input type='text' id='email' name='name' placeholder='email'>
-
-                <label for='subject'>Subject</label>
-                <textarea id='subject' name='subject' placeholder='Write something..' style='height:200px'></textarea>
-
-                <input type='submit' value='Submit'>
+            <form class='flex-container'>
+                <div class='flex-container'>
+                    <p> &#x1F498;Contact Me &#x1F498;</p>
+                </div>
+                <div class='flex-container'>
+                    <p>Name</p>
+                </div>
+                <div class='flex-container'>
+                    <input type="text" class='textInput' id="name" name='textInput' required placeholder="First Last">
+                </div>
+                <div class='flex-container'>
+                    <p>Email</p>
+                </div>
+                <div class='flex-container'>
+                    <input type="text" class='textInput' id="email" name='textInput' required placeholder="example@email.com">
+                </div>
+                <div class='flex-container'>
+                    <p>Subject</p>
+                </div>
+                <div class='flex-container'>
+                    <textarea id='subject' class='textInput' placeholder='Write something..'></textarea>
+                </div>
+                <div class="flex-container">
+                    <button>Submit</button>
+                </div>
             </form>
         </div>
-        <div class='flex-container' id='contentPad'></div>
     </section>
-
-    <div class='fun'></div>
 
     <section id='footer'>
         <div class="content"></div>

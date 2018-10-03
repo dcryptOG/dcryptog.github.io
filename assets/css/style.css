@@ -225,7 +225,7 @@ picture>img {
     align-content: center;
     hyphens: auto;
     margin: auto;
-    overflow: hidden;
+    overflow: auto;
     overflow-wrap: break-word;
     padding: 0;
 }
@@ -236,7 +236,7 @@ picture>img {
 }
 
 #content:nth-child(n) {
-    overflow: auto;
+    overflow: hidden;
     overflow-wrap: break-word;
     word-break: break-word;
     padding: 1vh 1vw;
@@ -473,42 +473,71 @@ picture>img {
 
 /* ============================CONTACT HTML============================================= */
 
-label {
-    font-size: var(--size-normal);
-    color: white;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+form {
+    flex-flow: column wrap;
+    margin: 0 auto;
+    align-items: center;
 }
 
-input[type=text],
-select,
-textarea {
-    width: 100%;
-    padding: 12px;
-    border: 0.1rem solid black;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
+form>.flex-container>p {
+    background: rgba(229, 57, 53, 0.8);
+    font-size: var(--size-normal);
+    font-weight: var(--weight-bold);
+    width: 80vw;
+    text-align: center;
+    border: 0.05rem solid rgba(245, 245, 245, 0.3);
+    border-radius: 0.1rem;
+    padding: 0.5rem;
 }
 
-input[type=submit] {
-    background-color: black;
-    font-family: inherit;
-    font-weight: inherit;
+form>.flex-container>input {
+    display: flex;
+    flex-flow: row wrap;
+    font-family: var(--font-main);
     font-size: var(--size-normal);
-    color: limegreen;
-    padding: 12px 20px;
-    border: 5px solid limegreen;
-    border-radius: 4px;
+    width: 80vw;
+    background: rgba(245, 245, 245, 0.5);
+    text-align: center;
+    border: 0.05rem solid rgba(245, 245, 245, 0.3);
+    border-radius: 0.1rem;
+    padding: 0.1rem;
+}
+
+form>.flex-container>textarea {
+    display: flex;
+    flex-flow: row wrap;
+    background: rgba(245, 245, 245, 0.5);
+    font-family: var(--font-main);
+    font-size: var(--size-normal);
+    width: 80vw;
+    height: 15vw;
+    text-align: left;
+    border: 0.05rem solid rgba(245, 245, 245, 0.3);
+    border-radius: 0.1rem;
+    padding: 0.1rem;
+}
+
+.flex-container>button {
+    border: 0;
+    text-decoration: none;
+    display: flex;
     cursor: pointer;
+    flex-wrap: nowrap;
+    padding: var(--gapSmall);
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: var(--size-big);
+    font-weight: var(--weight-bold);
+    background: rgba(229, 57, 53, 1);
+    margin: 1vh auto;
 }
 
-input[type=submit]:hover {
-    background-color: limegreen;
-    color: black;
-    border: 5pX solid whitesmoke;
+input:focus-within,
+input:focus,
+textarea:focus {
+    outline: 0.05rem solid rgba(229, 57, 53, 0.8);
 }
+
 
 /* ====================================PORTFOLIO HTML================================================= */
 
@@ -558,28 +587,16 @@ input[type=submit]:hover {
 
 /* ==========================================STICKY FOOTER=================================================== */
 
-.content {
-    flex: 1 0 auto;
-}
-
-.footPad {
-    display: felx;
-    background: linear-gradient(black 85%, limegreen);
-    margin-bottom: 0;
-    border: 1px solid black;
-}
-
 .footer {
+    flex-shrink: 0;
+    display: flex;
+}
+
+footer {
     display: flex;
     flex-shrink: 0;
-    height: 50%;
-    border-top: 0.1rem solid limegreen;
-    outline: 1px solid limegreen;
-    background-image: url(../img/background.jpg);
-    background-size: contain;
-    -moz-box-shadow: inset 0 0 100px black;
-    -webkit-box-shadow: inset 0 0 100px black;
-    box-shadow: inset 0 0 100px black;
+    background: rgba(229, 57, 53, 0.8);
+    border-top: 0.1vh solid rgba(245, 245, 245, 0.8);
 }
 
 .footNav {
@@ -592,37 +609,73 @@ input[type=submit]:hover {
 }
 
 .footLink {
-    font-family: inherit;
-    color: whitesmoke;
-    text-shadow: 0 0 4px limegreen;
-    margin: 0.5rem;
-    font-size: var(--size-normal);
+    margin: 0.2rem;
 }
 
-.footLink:nth-child(2) {
+.footLink:last-child {
     border-radius: 50%;
-    font-size: var(--size-normal);
-    height: 3rem;
-    width: 3rem;
-    padding: 1rem;
-    border: 0.1rem solid black;
-    background: rgba(0, 0, 0, 1);
-    -moz-box-shadow: inset 0 0 5px limegreen;
-    -webkit-box-shadow: inset 0 0 5px limegreen;
-    box-shadow: inset 0 0 5px limegreen;
+    font-family: inherit;
+    padding: 1vh;
+    border: 0.1rem solid whitesmoke;
+    font-size: 0.6rem;
+    color: whitesmoke;
 }
 
-.footLink:first-child {
-    font-size: var(--size-normal);
-    padding: 1rem 5rem;
-    background: radial-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3), rgba(50, 205, 50, 0.3));
-    border-radius: 35%;
+.footLink:nth-child(1) {
+    font-size: var(--size-big);
     border: transparent;
     display: flex;
     flex-grow: 0.4;
+    border-radius: 0.1rem;
+}
+
+.footLink:nth-child(1):hover {
+    border: 0.1rem solid black;
 }
 
 .footLink:hover {
     background: rgba(255, 255, 255, 0.5);
     color: black;
+}
+
+/* ============================================================================= */
+button:hover,
+input:focus,
+p:hover,
+#submit:hover {
+    animation: pulse 3s infinite;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
 }
