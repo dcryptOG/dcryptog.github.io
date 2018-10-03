@@ -174,8 +174,8 @@ a {
 }
 
 .titleBox:hover>.title {
-    background: limegreen;
-    color: black;
+    background: var(--blue-light);
+    color: var(--full-white);
 }
 
 .titleBox:hover {
@@ -186,7 +186,7 @@ a {
 .drop {
     display: block;
     margin-right: 3em;
-    font-size: --var(size-XL);
+    font-size: var(--size-XL);
     font-weight: bolder;
 }
 
@@ -204,10 +204,10 @@ a {
 .drop>a:first-child~span {
     position: absolute;
     display: none;
-    padding: 0;
+    padding: var(--gapSmall);
     margin: auto;
     text-align: left;
-    background: whitesmoke;
+    background: var(--blue-light);
 }
 
 
@@ -422,7 +422,7 @@ form>.flex-container>textarea {
     font-family: 'Lobster', cursive;
     font-size: var(--size-big);
     font-weight: var(--weight-bold);
-    background: rgba(229, 57, 53, 1);
+    background: var(--blue-med);
     margin: 1vh auto;
 }
 
@@ -432,14 +432,17 @@ textarea:focus {
     outline: 0.05rem solid rgba(229, 57, 53, 0.8);
 }
 
-/* #divUsa {
-
-} */
+#moment {
+    margin: 0;
+    font-size: var(--size-XL);
+    background: var(--blue-light-half);
+    padding: var(--gapL);
+}
 
 .moment {
-    justify-content: center;
-    width: 100vw;
-    flex-flow: row wrap;
+    margin: 0 auto;
+    background: var(--blue-light-half);
+    border-radius: var(--size-mid);
 }
 
 /* ====================================PORTFOLIO HTML================================================= */
