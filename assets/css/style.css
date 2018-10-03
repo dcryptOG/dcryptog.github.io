@@ -92,6 +92,16 @@ body {
     align-items: center;
 }
 
+
+.flex-container-left {
+    display: flex;
+    margin: auto;
+    width: 85vw;
+    justify-content: flex-start;
+    text-align: left;
+    align-items: center;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -197,7 +207,7 @@ a {
 
 .content {
     flex: 1 0 auto;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-flow: column wrap;
     word-break: break-word;
@@ -277,7 +287,6 @@ a {
     flex-flow: row wrap;
 }
 
-
 .contentTitle {
     display: flex;
     flex-flow: row wrap;
@@ -291,6 +300,10 @@ a {
     border: 0.05rem solid rgba(245, 245, 245, 0.3);
     border-radius: 0.1rem;
     padding: var(--gapSmall);
+}
+
+.fcontentItem {
+    display: flex;
 }
 
 .qualifyItem>#mCATScoreBox {
