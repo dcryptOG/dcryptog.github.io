@@ -248,7 +248,7 @@ a {
     display: flex;
     width: 100%;
     flex-flow: row nowrap;
-    margin: 2em auto;
+    margin: 3em auto;
 }
 
 .sidePad {
@@ -302,10 +302,6 @@ a {
     padding: var(--gapSmall);
 }
 
-.fcontentItem {
-    display: flex;
-}
-
 .qualifyItem>#mCATScoreBox {
     flex-grow: 2;
 }
@@ -317,18 +313,15 @@ a {
     border: 0.1rem solid limegreen;
 }
 
-
-
-
-#mCATScore {
-    text-decoration: underline;
+.date {
+    background: rgba(245, 245, 245, 0.5);
+    padding: var(--gapSmall);
 }
 
-#skillItem>p:nth-child(2) {
-    text-align: left;
+.contentSubTitle {
+    background: rgba(245, 245, 245, 0.5);
+    padding: var(--gapSmall);
 }
-
-
 
 /* ============================CONTACT HTML============================================= */
 
