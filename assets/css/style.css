@@ -66,7 +66,6 @@ html {
     box-sizing: inherit;
 }
 
-/* https://davidwalsh.name/multiple-background-css-animations */
 body {
     display: flex;
     flex-flow: column nowrap;
@@ -75,14 +74,36 @@ body {
     margin: auto;
     background: url(../img/paradisebg.jpg) repeat center center fixed;
     background-size: contain;
-    /* background: var(--blue-med); */
+    width: 100vw;
+    height: 100vh;
+    background-repeat: repeat;
+    animation: animatedBackground 40s linear infinite;
+}
+
+
+@keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 100vw 0;
+    }
+}
+
+/* body {
+    display: flex;
+    flex-flow: column nowrap;
+    align-self: auto;
+    justify-self: auto;
+    margin: auto;
+    background: url(../img/paradisebg.jpg) no-repeat ;
+    background-size: cover;
     width: 100vw;
     height: 100vh;
     background-repeat: repeat-x;
     animation: animatedBackground 40s linear infinite;
-}
-
-/* http://css3.bradshawenterprises.com/cfimg/ */
+} */
 
 @keyframes animatedBackground {
     from {
@@ -179,7 +200,8 @@ a {
 }
 
 .titleBox:hover {
-    border: 0.5rem solid white;
+    background: whitesmoke;
+    color: var(--blue-med);
 }
 
 /* topNav======================================================================================= */
