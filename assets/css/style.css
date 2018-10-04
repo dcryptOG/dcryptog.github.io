@@ -82,6 +82,8 @@ body {
     animation: animatedBackground 40s linear infinite;
 }
 
+/* http://css3.bradshawenterprises.com/cfimg/ */
+
 @keyframes animatedBackground {
     from {
         background-position: 0 0;
@@ -134,8 +136,6 @@ a {
     top: 0;
     width: 100%;
     border-bottom: 0.2em solid black;
-    background-image: url(../img/spaceNorLights.jpg);
-    background-size: contain;
     display: flex;
     justify-content: flex-start;
     flex-flow: row wrap;
@@ -281,12 +281,9 @@ a {
     margin: auto 2em;
 }
 
-
-
+/* //////================================================================================= */
 /* =============================================INDEX HTML========================================================== */
 
-
-/* INDEX COVER LETTER STYLES*************** */
 
 
 #coverLetter {
@@ -378,7 +375,7 @@ form {
 }
 
 form>.flex-container>p {
-    font-size: var(--size-normal);
+    font-size: var(--size-L);
     font-weight: var(--weight-bold);
     text-align: center;
     padding: var(--gapSmall);
@@ -388,7 +385,7 @@ form>.flex-container>input {
     display: flex;
     flex-flow: row wrap;
     font-family: var(--font-main);
-    font-size: var(--size-normal);
+    font-size: var(--size-L);
     width: 80vw;
     background: var(--half-white);
     text-align: center;
@@ -429,7 +426,7 @@ form>.flex-container>textarea {
 input:focus-within,
 input:focus,
 textarea:focus {
-    outline: 0.05rem solid rgba(229, 57, 53, 0.8);
+    outline: 0.05rem solid var(--blue-med);
 }
 
 #moment {
@@ -552,12 +549,14 @@ footer {
 
 p:hover,
 button:hover,
+button:focus-within,
 input:focus {
     font-size: var(--size-mid);
     padding: var(--gapSmall);
 }
 
-
+.drop>a:hover,
+.drop:hover,
 .galleryNav:hover,
 image:hover,
 p:hover,
@@ -695,10 +694,21 @@ input:focus,
     }
 }
 
+#top {
+    background: linear-gradient(to right, rgba(69, 194, 197, 1) 19%, rgba(53, 206, 229, 1) 40%, rgba(245, 245, 245, 1) 83%, rgba(69, 194, 197, 1) 100%);
+
+}
+
 .contentTitle,
 .contentSubTitle,
 .galleryNav {
-    background: linear-gradient(to right, rgba(69, 194, 197, 0.5) 19%, rgba(53, 206, 229, 0.5) 40%, rgba(245, 245, 245, 0.5) 83%, rgba(69, 194, 197, 0.5) 100%);
+    background: linear-gradient(to right, rgba(69, 194, 197, 0.7) 19%, rgba(53, 206, 229, 0.7) 40%, rgba(245, 245, 245, 0.7) 83%, rgba(69, 194, 197, 0.7) 100%);
+}
+
+#top,
+.contentTitle,
+.contentSubTitle,
+.galleryNav {
     background-size: 100vw;
     animation: bg 9s linear infinite;
     will-change: opacity;
@@ -717,89 +727,4 @@ input:focus,
     0% {
         background-position-x: 0vw;
     }
-}
-
-a:hover,
-.drop:hover,
-    {
-    animation: rubberBand 5s infinite;
-}
-
-@-webkit-keyframes rubberBand {
-    from {
-        -webkit-transform: scale3d(1, 1, 1);
-        transform: scale3d(1, 1, 1);
-    }
-
-    30% {
-        -webkit-transform: scale3d(1.25, 0.75, 1);
-        transform: scale3d(1.25, 0.75, 1);
-    }
-
-    40% {
-        -webkit-transform: scale3d(0.75, 1.25, 1);
-        transform: scale3d(0.75, 1.25, 1);
-    }
-
-    50% {
-        -webkit-transform: scale3d(1.15, 0.85, 1);
-        transform: scale3d(1.15, 0.85, 1);
-    }
-
-    65% {
-        -webkit-transform: scale3d(0.95, 1.05, 1);
-        transform: scale3d(0.95, 1.05, 1);
-    }
-
-    75% {
-        -webkit-transform: scale3d(1.05, 0.95, 1);
-        transform: scale3d(1.05, 0.95, 1);
-    }
-
-    to {
-        -webkit-transform: scale3d(1, 1, 1);
-        transform: scale3d(1, 1, 1);
-    }
-}
-
-@keyframes rubberBand {
-    from {
-        -webkit-transform: scale3d(1, 1, 1);
-        transform: scale3d(1, 1, 1);
-    }
-
-    30% {
-        -webkit-transform: scale3d(1.25, 0.75, 1);
-        transform: scale3d(1.25, 0.75, 1);
-    }
-
-    40% {
-        -webkit-transform: scale3d(0.75, 1.25, 1);
-        transform: scale3d(0.75, 1.25, 1);
-    }
-
-    50% {
-        -webkit-transform: scale3d(1.15, 0.85, 1);
-        transform: scale3d(1.15, 0.85, 1);
-    }
-
-    65% {
-        -webkit-transform: scale3d(0.95, 1.05, 1);
-        transform: scale3d(0.95, 1.05, 1);
-    }
-
-    75% {
-        -webkit-transform: scale3d(1.05, 0.95, 1);
-        transform: scale3d(1.05, 0.95, 1);
-    }
-
-    to {
-        -webkit-transform: scale3d(1, 1, 1);
-        transform: scale3d(1, 1, 1);
-    }
-}
-
-.rubberBand {
-    -webkit-animation-name: rubberBand;
-    animation-name: rubberBand;
 }
