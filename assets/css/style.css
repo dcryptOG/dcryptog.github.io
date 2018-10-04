@@ -66,14 +66,14 @@ html {
     box-sizing: inherit;
 }
 
-
+/* https://davidwalsh.name/multiple-background-css-animations */
 body {
     display: flex;
     flex-flow: column nowrap;
     align-self: auto;
     justify-self: auto;
     margin: auto;
-    background: url(../img/paradisebg.jpg) no-repeat center center fixed;
+    background: url(../img/paradisebg.jpg) repeat center center fixed;
     background-size: contain;
     /* background: var(--blue-med); */
     width: 100vw;
