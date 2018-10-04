@@ -408,11 +408,13 @@ form>.flex-container>textarea {
     padding: 0.1rem;
 }
 
-.flex-container>button {
+.flex-container>.button {
     border: 0;
     text-decoration: none;
     display: flex;
     cursor: pointer;
+    width: 5vw;
+    height: 5vw;
     flex-wrap: nowrap;
     padding: var(--gapSmall);
     text-align: center;
@@ -502,7 +504,7 @@ textarea:focus {
 footer {
     display: flex;
     flex-shrink: 0;
-    background: rgba(69, 194, 197, 1);
+    background: rgba(69, 194, 197, 0.5);
     border-top: 0.1vh solid rgba(245, 245, 245, 0.8);
 }
 
@@ -529,7 +531,7 @@ footer {
 }
 
 .footLink:nth-child(1) {
-    font-size: var(--size-big);
+    font-size: var(--size-XL);
     border: transparent;
     display: flex;
     flex-grow: 0.4;
@@ -548,13 +550,14 @@ footer {
 /* ============================================================================= */
 
 p:hover,
-button:hover,
-button:focus-within,
+/* button:hover, */
+.button:focus-within,
 input:focus {
     font-size: var(--size-mid);
     padding: var(--gapSmall);
 }
 
+form:focus-within,
 .drop>a:hover,
 .drop:hover,
 .galleryNav:hover,
@@ -600,6 +603,7 @@ input:focus,
     }
 }
 
+.button:focus,
 .galleryBox:hover {
     animation: jello 8s infinite;
 }
