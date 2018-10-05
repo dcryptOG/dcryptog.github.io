@@ -227,7 +227,7 @@ a {
 @media screen and (min-width: 450px) {
     .drop {
         display: inline-flex;
-        justify-content: flex-end;
+
     }
 
     .mobileDrop {
@@ -247,7 +247,6 @@ a {
 
     .mobileDrop {
         display: inline-flex;
-        justify-content: center;
     }
 
     .navPad {
