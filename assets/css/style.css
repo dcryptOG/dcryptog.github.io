@@ -649,6 +649,12 @@ footer {
 
 /* ============================================================================= */
 
+p::selection,
+a::selection {
+    background: black;
+    color: var(--full-white);
+}
+
 #coverLetter>a,
 .galleryBox,
 .galleryTitle {
