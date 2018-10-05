@@ -28,6 +28,7 @@
     --gapMed: 2vh 2vw;
     --gapL: 3vh 3vw;
     --gapXL: 5vh 5vw;
+    --gapTop: 7em;
     /* borders */
     --borderSm: 0.05rem;
     --borderMed: 0.1rem;
@@ -41,6 +42,8 @@
         --size-L: 4vw;
         --size-XL: 6vw;
         --size-title: 8vw;
+        --gapTop: 10vw;
+        --borderSm: 0.1vw;
     }
 
     html {
@@ -161,6 +164,13 @@ a {
     width: 100vw;
     word-wrap: none;
     word-break: normal;
+}
+
+.topPad {
+    display: flex;
+    width: 100%;
+    flex-flow: row nowrap;
+    margin: var(--gapTop) auto;
 }
 
 /* TITLE************************************************************************************** */
@@ -334,13 +344,6 @@ a {
     display: flex;
     flex-flow: row nowrap;
     margin: 1vh auto;
-}
-
-.topPad {
-    display: flex;
-    width: 100%;
-    flex-flow: row nowrap;
-    margin: 7em auto;
 }
 
 .sidePad {
