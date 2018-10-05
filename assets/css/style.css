@@ -15,11 +15,12 @@
     --font-main: 'Josefin Sans', sans-serif;
     --font-heading: 'Lobster', cursive;
     /* font-sizes */
-    --size-normal: 1.25rem;
-    --size-M: 1.5rem;
-    --size-L: 2rem;
-    --size-XL: 2.5rem;
-    --size-title: 3.5em;
+    --sizeNormal: 1.25rem;
+    --sizeM: 1.5rem;
+    --sizeL: 2rem;
+    --sizeXL: 2.5rem;
+    --sizeXXL: 3.5rem;
+    --sizeTitle: 5rem;
     /* font-weights */
     --weight-normal: 500;
     --weight-bold: 700;
@@ -28,7 +29,7 @@
     --gapMed: 2vh 2vw;
     --gapL: 3vh 3vw;
     --gapXL: 5vh 5vw;
-    --gapTop: 7em;
+    --gapTop: 1em;
     /* borders */
     --borderSm: 0.05rem;
     --borderMed: 0.1rem;
@@ -37,11 +38,11 @@
 @media only screen and (max-width: 650px) {
 
     :root {
-        --size-normal: 2vw;
-        --size-M: 3vw;
-        --size-L: 4vw;
-        --size-XL: 6vw;
-        --size-title: 8vw;
+        --sizeNormal: 2vw;
+        --sizeM: 3vw;
+        --sizeL: 4vw;
+        --sizeXL: 6vw;
+        --sizeTitle: 8vw;
         --gapTop: 10vw;
         --borderSm: 0.1vw;
     }
@@ -49,15 +50,25 @@
     html {
         font-size: 2vw;
     }
+
+    /* #coverLetter {
+        display: flex;
+    } */
 }
 
+/* @media only screen and (min-width: 650px) {
+    #coverLetter {
+        display: inline-flex;
+    }
+} */
+
+
 html {
-    /* make sure we use up the whole viewport */
     width: 100%;
     height: 100%;
     font-weight: bold;
     font-family: var(--font-main);
-    font-size: 1em;
+    font-size: 1.5em;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -194,14 +205,14 @@ a {
     flex-flow: row wrap;
 }
 
-.titleBox:hover>.title {
+.titleBox:hover>a {
     background: var(--blue-light);
     color: var(--full-white);
 }
 
 .titleBox:hover {
-    background: whitesmoke;
-    color: transparent;
+    background: var(--blue-light);
+    color: var(--full-white);
 }
 
 /* topNav======================================================================================= */
@@ -224,7 +235,7 @@ a {
 
 
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 500px) {
     .drop {
         display: inline-flex;
 
@@ -240,7 +251,7 @@ a {
     }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
     .drop {
         display: none;
     }
@@ -360,22 +371,34 @@ a {
 /* //////================================================================================= */
 /* =============================================INDEX HTML========================================================== */
 
-
-
 #coverLetter {
-    display: inline-flex;
-    width: 85vw;
-    align-items: flex-start;
-    justify-content: space-between;
+    width: 90vw;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#coverLetter>a {
+    width: 80vw;
+}
+
+#coverLetter>a>picture>img {
+    width: 20vw;
     margin: auto;
 }
 
-#coverPhotoBox {
-    border-radius: var(--borderSm);
+#coverLetter>a>picture>img {
+    border-radius: var(--borderMed);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
 }
 
-#coverPhotoBox>a>picture {
-    border-radius: var(--borderMed);
+#coverPhotoBox>a>picture>img {
+    object-fit: contain;
 }
 
 #coverLetter>p {
@@ -388,7 +411,6 @@ a {
     color: rgba(255, 255, 255, 0);
 }
 
-/* #coverLetter>picture>img {} */
 
 /* INDEX QUALIFICATIONS STYLES*************** */
 .contentTitleBox {
@@ -400,10 +422,10 @@ a {
     display: flex;
     flex-flow: row wrap;
     font-family: var(--font-heading);
-    font-size: var(--size-XL);
+    font-size: var(--size-XXL);
     font-weight: var(--weight-bold);
     justify-content: center;
-    width: 90vw;
+    width: 95vw;
     background: var(--half-white);
     text-align: center;
     border: 0.05rem solid var(--less-white);
@@ -430,7 +452,7 @@ a {
 }
 
 .date {
-    background: var(--half-white);
+    background: var(--less-white);
     padding: var(--gapSmall);
     font-size: var(--size-normal);
 }
@@ -439,6 +461,9 @@ a {
     background: var(--half-white);
     font-size: var(--size-mid);
     padding: var(--gapSmall);
+    margin: var(--gapSmall);
+    text-align: center;
+    justify-content: center;
 }
 
 /* ============================CONTACT HTML============================================= */
@@ -538,7 +563,6 @@ textarea:focus {
     overflow: hidden;
     margin: var(--gapSmall);
     box-sizing: border-box;
-    background: var(--blue-med);
 }
 
 .galleryBox>a>picture {
@@ -625,6 +649,12 @@ footer {
 
 /* ============================================================================= */
 
+#coverLetter>a,
+.galleryBox,
+.galleryTitle {
+    background: var(--blue-light-half);
+}
+
 p:hover,
 /* button:hover, */
 .button:focus-within,
@@ -679,6 +709,7 @@ input:focus,
     }
 }
 
+#coverLetter>a,
 .button:focus,
 .galleryBox:hover {
     animation: jello 8s infinite;
@@ -774,15 +805,17 @@ input:focus,
     }
 }
 
+#coverLetter>a>picture,
 #top {
     background: linear-gradient(to right, rgba(69, 194, 197, 1) 19%, rgba(53, 206, 229, 1) 40%, rgba(245, 245, 245, 1) 83%, rgba(69, 194, 197, 1) 100%);
 
 }
 
+
 .contentTitle,
 .contentSubTitle,
 .galleryNav {
-    background: linear-gradient(to right, rgba(69, 194, 197, 0.7) 19%, rgba(53, 206, 229, 0.7) 40%, rgba(245, 245, 245, 0.7) 83%, rgba(69, 194, 197, 0.7) 100%);
+    background: linear-gradient(to right, rgba(69, 194, 197, 0.6) 19%, rgba(53, 206, 229, 0.6) 40%, rgba(245, 245, 245, 0.6) 83%, rgba(69, 194, 197, 0.6) 100%);
 }
 
 #top,
