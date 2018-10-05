@@ -19,7 +19,7 @@
     --size-M: 1.5rem;
     --size-L: 2rem;
     --size-XL: 2.5rem;
-    --size-title: 4em;
+    --size-title: 3.5em;
     /* font-weights */
     --weight-normal: 500;
     --weight-bold: 700;
@@ -33,13 +33,14 @@
     --borderMed: 0.1rem;
 }
 
-@media screen and (max-width: 400px) {
+@media only screen and (max-width: 650px) {
 
     :root {
         --size-normal: 2vw;
-        --size-mid: 3vw;
-        --size-big: 4vw;
-        --size-title: 6vw;
+        --size-M: 3vw;
+        --size-L: 4vw;
+        --size-XL: 6vw;
+        --size-title: 8vw;
     }
 
     html {
@@ -91,20 +92,6 @@ body {
     }
 }
 
-/* body {
-    display: flex;
-    flex-flow: column nowrap;
-    align-self: auto;
-    justify-self: auto;
-    margin: auto;
-    background: url(../img/paradisebg.jpg) no-repeat ;
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
-    background-repeat: repeat-x;
-    animation: animatedBackground 40s linear infinite;
-} */
-
 @keyframes animatedBackground {
     from {
         background-position: 0 0;
@@ -138,6 +125,7 @@ body {
 }
 
 a {
+    padding: var(--gapSmall);
     text-decoration: none;
     color: black;
 }
@@ -148,7 +136,7 @@ a {
     display: flex;
     z-index: 1;
     justify-content: space-between;
-    flex-flow: row wrap;
+    flex-flow: row;
 }
 
 #top {
@@ -159,7 +147,7 @@ a {
     border-bottom: 0.2em solid black;
     display: flex;
     justify-content: flex-start;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     margin: auto;
     align-items: center;
     text-align: center;
@@ -167,10 +155,12 @@ a {
 
 .topNav {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 100vw;
+    word-wrap: none;
+    word-break: normal;
 }
 
 /* TITLE************************************************************************************** */
@@ -201,42 +191,102 @@ a {
 
 .titleBox:hover {
     background: whitesmoke;
-    color: var(--blue-med);
+    color: transparent;
 }
 
 /* topNav======================================================================================= */
-.drop {
-    display: block;
-    margin-right: 3em;
-    font-size: var(--size-XL);
-    font-weight: bolder;
-}
-
-.drop>a:first-child {
+.topNav ul {
+    list-style: none;
+    border-radius: var(--borderSm);
     position: relative;
-    text-align: center;
-    color: black;
-    margin: 0 auto;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-around;
+    margin: 0;
+    padding: 0
 }
 
-.drop>a:first-child~span {
-    position: absolute;
-    display: none;
+.topNav ul a {
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+    font-weight: var(--weight-bold);
+    font-size: var(--size-M);
     padding: var(--gapSmall);
-    margin: auto;
-    text-align: left;
+    font-family: var(--font-main);
+}
+
+
+
+@media screen and (min-width: 450px) {
+    .drop {
+        display: inline-flex;
+        justify-content: flex-end;
+    }
+
+    .mobileDrop {
+        display: none;
+    }
+
+    .navPad {
+        display: none;
+        margin: auto 20vw;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .drop {
+        display: none;
+    }
+
+    .mobileDrop {
+        display: inline-flex;
+        justify-content: center;
+    }
+
+    .navPad {
+        display: flex;
+        margin: auto 10vw;
+    }
+}
+
+.topnav ul li {
+    position: relative;
+    flex-flow: row nowrap;
+    margin: 0;
+    padding: 0
+}
+
+.topNav ul li.current-menu-item {
+    background: var(--full-white);
+}
+
+.topNav ul li:hover {
     background: var(--blue-light);
 }
 
-
-.drop:hover>a:first-child~span {
-    display: flex;
-    flex-flow: column wrap;
+.topNav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background: #fff;
+    padding: 0
 }
+
+.topNav ul ul a {
+    line-height: 120%;
+    padding: var(--gapSmall);
+}
+
+.topNav ul ul ul {
+    top: 0;
+    left: 100%
+}
+
+.topNav ul li:hover>ul {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .mobileDrop {
+    display: none;
+} */
 
 /*  =============================CONTNET==============================================*/
 
@@ -302,6 +352,8 @@ a {
     display: flex;
     margin: auto 2em;
 }
+
+
 
 /* //////================================================================================= */
 /* =============================================INDEX HTML========================================================== */
@@ -434,16 +486,16 @@ form>.flex-container>textarea {
     border: 0;
     text-decoration: none;
     display: flex;
+    flex-flow: row wrap;
+    width: 20vw;
+    /* overflow-wrap: break-word; */
     cursor: pointer;
-    width: 5vw;
-    height: 5vw;
-    flex-wrap: nowrap;
     padding: var(--gapSmall);
     text-align: center;
     font-family: 'Lobster', cursive;
-    font-size: var(--size-big);
+    font-size: var(--size-mid);
     font-weight: var(--weight-bold);
-    background: var(--blue-med);
+    background: linear-gradient(to right, rgba(69, 194, 197, 0.0), rgba(69, 194, 197, 0.8), rgba(69, 194, 197, 0.8), rgba(69, 194, 197, 0));
     margin: 1vh auto;
 }
 
