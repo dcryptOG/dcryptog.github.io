@@ -87,12 +87,11 @@ body {
     align-self: auto;
     justify-self: auto;
     margin: auto;
-    background: url(../img/paradisebg.jpg) repeat center center fixed;
-    background-size: contain;
+    background: url(../img/bgblue.jpg) no-repeat center center fixed;
+    background-size: cover;
     width: 100vw;
     height: 100vh;
-    background-repeat: repeat;
-    animation: animatedBackground 40s linear infinite;
+    /* animation: animatedBackground 40s linear infinite; */
 }
 
 
