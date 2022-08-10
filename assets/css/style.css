@@ -81,6 +81,23 @@ html {
     box-sizing: inherit;
 }
 
+.bg {
+    background: url(../img/bgblue.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0.5px;
+    left: 0;
+    right: 0;
+    bottom: 0.5px;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; /* or any other value */
+    overflow-y: auto; /* or any other value */
+}
+
 body {
     display: flex;
     flex-flow: column nowrap;
@@ -88,12 +105,6 @@ body {
     justify-self: auto;
     margin: auto;
     /* background: url(../img/bgblue.jpg) no-repeat center center fixed; */
-    background: url(../img/bgblue.jpg);
-    min-height: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
     /* width: 100vw;
     height: 100vh; */
     /* animation: animatedBackground 40s linear infinite; */
