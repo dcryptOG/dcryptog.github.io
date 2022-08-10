@@ -81,29 +81,7 @@ html {
     box-sizing: inherit;
 }
 
-/* .bg {
-    background: url(../img/bgblue.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    top: 0.5px;
-    left: 0;
-    right: 0;
-    bottom: 0.5px;
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-} */
-
-body {
-    display: flex;
-    flex-flow: column nowrap;
-    align-self: auto;
-    justify-self: auto;
-    margin: 0;
+.bg {
     background: url(../img/bgblue.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -116,10 +94,32 @@ body {
     bottom: 0.5px;
     height: 100%;
     width: 100vw;
-    -webkit-overflow-scrolling: touch;
-    overflow-x: auto;
-    overflow-y: scroll;
-    /* overflow-x: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    align-self: auto;
+    justify-self: auto;
+    width: 100%;
+    margin: 0;
+    /* margin: 0;
+    background: url(../img/bgblue.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    top: 0.5px;
+    left: 0;
+    right: 0;
+    bottom: 0.5px;
+    height: 100%;
+    width: 100vw;
+    overflow-x: hidden;
     overflow-y: auto; */
     /* background: url(../img/bgblue.jpg) no-repeat center center fixed; */
     /* width: 100vw;
@@ -197,6 +197,7 @@ a {
     margin: auto;
     align-items: center;
     text-align: center;
+    transition: top 0.3;
 }
 
 .topNav {
