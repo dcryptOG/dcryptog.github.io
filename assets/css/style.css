@@ -87,7 +87,7 @@ html {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    position: relative;
+    position: absolute;
     top: 0.5px;
     left: 0;
     right: 0;
