@@ -103,7 +103,7 @@ body {
     flex-flow: column nowrap;
     align-self: auto;
     justify-self: auto;
-    margin: auto;
+    margin: 0;
     background: url(../img/bgblue.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
