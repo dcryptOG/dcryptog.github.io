@@ -81,8 +81,8 @@ html {
     box-sizing: inherit;
 }
 
-.bg {
-    /* background: url(../img/bgblue.jpg);
+/* .bg {
+    background: url(../img/bgblue.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -95,8 +95,8 @@ html {
     height: 100%;
     width: 100%;
     overflow-x: hidden;
-    overflow-y: auto; */
-}
+    overflow-y: auto;
+} */
 
 body {
     display: flex;
