@@ -87,10 +87,13 @@ body {
     align-self: auto;
     justify-self: auto;
     margin: auto;
-    background: url(../img/bgblue.jpg) no-repeat center center fixed;
-    background-size: cover;
+    /* background: url(../img/bgblue.jpg) no-repeat center center fixed; */
+    background: url(../img/bgblue.jpg);
+    min-height: 100%;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    background-size: cover;
     /* width: 100vw;
     height: 100vh; */
     /* animation: animatedBackground 40s linear infinite; */
