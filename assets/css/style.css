@@ -190,7 +190,6 @@ a {
     position: fixed;
     top: 0;
     width: 100%;
-    border-bottom: 0.2em solid black;
     display: flex;
     justify-content: flex-start;
     flex-flow: row nowrap;
@@ -220,11 +219,11 @@ a {
 /* TITLE************************************************************************************** */
 
 .title {
-    background: black;
-    color: var(--blue-med);
+    /* background: black; */
+    /* color: var(--blue-med); */
     font-size: var(--size-title);
     padding: var(--gapLarge);
-    font-family: var(--font-heading);
+    /* font-family: var(--font-heading); */
     font-style: italic;
     font-weight: bolder;
     text-align: center;
@@ -232,8 +231,9 @@ a {
 
 .titleBox {
     margin-left: 0;
-    background: black;
+    /* background: black; */
     padding: 1rem;
+    background-image: radial-gradient(rgba(255,255,255,0.9) 25%, rgba(255,255,255,0.3) 55%, rgba(255,255,255,0.05) 75%);
     display: inline-flex;
     flex-flow: row wrap;
 }
@@ -254,7 +254,10 @@ a {
     border-radius: var(--borderSm);
     position: relative;
     margin: 0;
-    padding: 0
+    padding: 0;
+    background-image: radial-gradient(rgba(255,255,255,1) 25%, rgba(255,255,255,0.3) 55%, rgba(255,255,255,0.05) 75%);
+    border-radius: 30%;
+
 }
 
 .topNav ul a {
@@ -264,9 +267,10 @@ a {
     font-size: var(--size-M);
     padding: var(--gapSmall);
     font-family: var(--font-main);
+    /* background: radial-gradient(rgba(255,255,255, 0.4) 5%, rgba(255,255,255, 0.2)) 20%, rgba(255,255,255, 0.1) 30%, rgba(255,255,255, 0.05) 35%, rgba(255,255,255, 1) 100%; */
+    background-image: radial-gradient(rgba(255,255,255,0.9) 25%, rgba(255,255,255,0.3) 55%, rgba(255,255,255,0.05) 75%);
+    border-radius: 30%;
 }
-
-
 
 @media screen and (min-width: 500px) {
     .drop {
@@ -707,7 +711,6 @@ form:focus-within,
 .drop:hover,
 .galleryNav:hover,
 image:hover,
-p:hover,
 button:hover,
 input:focus,
 #submit:hover {
@@ -748,9 +751,7 @@ input:focus,
     }
 }
 
-#coverLetter>a,
-.button:focus,
-.galleryBox:hover {
+.button:focus {
     animation: jello 8s infinite;
 }
 
@@ -846,7 +847,7 @@ input:focus,
 
 #coverLetter>a>picture,
 #top {
-    background: linear-gradient(to right, rgba(69, 194, 197, 1) 19%, rgba(53, 206, 229, 1) 40%, rgba(245, 245, 245, 1) 83%, rgba(69, 194, 197, 1) 100%);
+    background: linear-gradient(to right, rgba(69, 194, 197, 0.1) 19%, rgba(53, 206, 229, 0.2) 40%, rgba(245, 245, 245, 1) 83%, rgba(69, 194, 197, 0.2) 100%);
 
 }
 
@@ -854,7 +855,7 @@ input:focus,
 .contentTitle,
 .contentSubTitle,
 .galleryNav {
-    background: linear-gradient(to right, rgba(69, 194, 197, 0.6) 19%, rgba(53, 206, 229, 0.6) 40%, rgba(245, 245, 245, 0.6) 83%, rgba(69, 194, 197, 0.6) 100%);
+    background: linear-gradient(to right, rgba(69, 194, 197, 0.2) 19%, rgba(53, 206, 229, 0.1) 40%, rgba(245, 245, 245, 0.6) 83%, rgba(69, 194, 197, 0.1) 100%);
 }
 
 #top,
@@ -862,7 +863,7 @@ input:focus,
 .contentSubTitle,
 .galleryNav {
     background-size: 100vw;
-    animation: bg 9s linear infinite;
+    animation: bg 45s linear infinite;
     will-change: opacity;
     transition: opacity 0.3s ease-out;
 }
